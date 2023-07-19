@@ -975,6 +975,10 @@ namespace move_base {
 
           //update the index of the next recovery behavior that we'll try
           recovery_index_++;
+          if (recovery_index_ >= recovery_behaviors_.size())
+          {
+            recovery_index_ = 0;
+          }
         }
         else{
           ROS_DEBUG_NAMED("move_base_recovery","All recovery behaviors have failed, locking the planner and disabling it.");

@@ -168,7 +168,7 @@ void InflationLayer::onFootprintChanged()
   computeCaches();
   need_reinflation_ = true;
 
-  ROS_DEBUG("InflationLayer::onFootprintChanged(): num footprint points: %lu,"
+  ROS_INFO("InflationLayer::onFootprintChanged(): num footprint points: %lu,"
             " inscribed_radius_ = %.3f, inflation_radius_ = %.3f",
             layered_costmap_->getFootprint().size(), inscribed_radius_, inflation_radius_);
 }

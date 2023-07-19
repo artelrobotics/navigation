@@ -73,7 +73,6 @@ void ClearCostmapRecovery::initialize(std::string name, tf2_ros::Buffer* tf,
     std::vector<std::string> clearable_layers_default, clearable_layers;
     clearable_layers_default.push_back( std::string("obstacles") );
     private_nh.param("layer_names", clearable_layers, clearable_layers_default);
-
     for(unsigned i=0; i < clearable_layers.size(); i++) {
         ROS_INFO("Recovery behavior will clear layer '%s'", clearable_layers[i].c_str());
         clearable_layers_.insert(clearable_layers[i]);
